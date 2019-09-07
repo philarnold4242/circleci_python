@@ -1,0 +1,28 @@
+version: 2
+general:
+  branches:
+    only:
+     - master
+     - dev
+
+jobs:
+  build:
+    docker:
+      - image: circleci/python:3.6.1
+
+    steps:
+      - checkout
+      - run:
+          name: install dependencies
+          command: pip install --user -r requirements.txt
+
+      - run:
+          name: run tests
+          command: python -m nose2
+#
+#       - store_artifacts:
+#          path: test-reports
+#          destination: test-reports
+
+
+
