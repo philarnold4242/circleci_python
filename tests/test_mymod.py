@@ -1,6 +1,6 @@
 from unittest import TestCase
 
-import circleci_python.mymod as mm
+import mymod as mm
 
 class TestJoke(TestCase):
     def test_is_string(self):
