@@ -9,10 +9,10 @@ jobs:
       - run:
           name: install dependencies
           command: pip install --user -r requirements.txt
-#
-#      - run:
-#          name: run tests
-#          command: nosetests tests/math-test.py
+
+      - run:
+          name: run tests
+          command: nosetests tests/math-test.py
 #
 #       - store_artifacts:
 #          path: test-reports
