@@ -1,2 +1,2 @@
 def joke():
-    return("hello")
+    return("he")
