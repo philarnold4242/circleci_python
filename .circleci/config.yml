@@ -3,19 +3,33 @@ jobs:
   build:
     docker:
       - image: circleci/python:3.7.3
+#    steps:
+#      - checkout
+#      - run:
+#          name: install dependencies
+#          command: pip install -r requirements.txt
+#
+#      - run:
+#          name: run tests
+#          command: nosetests tests/math-test.py
+#
+#       - store_artifacts:
+#          path: test-reports
+#          destination: test-reports
 
+
+
+version: 2
+jobs:
+  build:
+    docker:
+      - image: circleci/<language>:<version TAG>
     steps:
       - checkout
-
-      - run:
-          name: install dependencies
-          command: pip install -r requirements.txt
-
-      - run:
-          name: run tests
-          command: nosetests tests/math-test.py
-
-       - store_artifacts:
-          path: test-reports
-          destination: test-reports
-      
+      - run: <command>
+  test:
+    docker:
+      - image: circleci/<language>:<version TAG>
+    steps:
+      - checkout
+      - run: <command>
